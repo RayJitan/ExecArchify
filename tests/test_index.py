@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import subprocess
+import sys
 import tempfile
 import threading
 import unittest
@@ -48,6 +49,17 @@ def commit(root, message):
     git(root, "add", "-A")
     git(root, "commit", "-qm", message)
     return git(root, "rev-parse", "HEAD")
+
+
+def with_ctime(info, ctime_ns):
+    return os.stat_result(
+        tuple(info),
+        {
+            "st_mtime_ns": info.st_mtime_ns,
+            "st_ctime_ns": ctime_ns,
+            "st_birthtime_ns": getattr(info, "st_birthtime_ns", None),
+        },
+    )
 
 
 class IndexTests(unittest.TestCase):
@@ -168,6 +180,34 @@ class IndexTests(unittest.TestCase):
         self.assertEqual(index.synchronize(self.ws)["updated"], 1)
         self.assertEqual(self.rows("SELECT name FROM symbols"), [("third",)])
         self.assertEqual(index.synchronize(self.ws)["read_files"], 0)
+
+    @unittest.skipUnless(
+        os.name == "nt" and sys.version_info >= (3, 12),
+        "Windows st_birthtime_ns requires Python 3.12 or later",
+    )
+    def test_initial_scan_accepts_different_windows_ctimes(self):
+        path = write(self.root, "older.py", "def older(): pass\n")
+        with path.open("rb") as stream:
+            opened = os.fstat(stream.fileno())
+        handle_info = with_ctime(opened, path.lstat().st_ctime_ns + 1)
+
+        with patch.object(index.os, "fstat", return_value=handle_info):
+            self.assertEqual(index.synchronize(self.ws)["added"], 1)
+        self.assertEqual(self.rows("SELECT name FROM symbols"), [("older",)])
+        self.assertEqual(index.synchronize(self.ws)["read_files"], 0)
+
+    def test_change_time_on_open_handle_is_checked_during_read(self):
+        path = write(self.root, "editing.py", "def editing(): pass\n").resolve()
+        before = path.lstat()
+        with path.open("rb") as stream:
+            opened = os.fstat(stream.fileno())
+        changed = with_ctime(opened, opened.st_ctime_ns + 1)
+
+        with (
+            patch.object(index.os, "fstat", side_effect=[opened, changed]),
+            self.assertRaisesRegex(index._ChangedDuringScan, "while it was being read"),
+        ):
+            index._read_worktree_file(path, before)
 
     def test_bom_unicode_sources_and_raw_byte_evidence(self):
         text = "def 信号():\n    return '汉'\n"

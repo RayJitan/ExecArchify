@@ -357,24 +357,30 @@ class _ChangedDuringScan(RuntimeError):
     pass
 
 
-def _stat_tuple(info):
-    return (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns)
+def _stat_tuple(info, *, use_birthtime=False):
+    timestamp = info.st_ctime_ns
+    if use_birthtime:
+        timestamp = getattr(info, "st_birthtime_ns", timestamp)
+    return (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, timestamp)
 
 
 def _read_worktree_file(path, before):
     flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NOFOLLOW", 0)
     flags |= getattr(os, "O_NONBLOCK", 0)
     if path.resolve() != path:
-        raise _ChangedDuringScan("Source path changed during indexing")
+        raise _ChangedDuringScan(f"Source path changed during indexing ({path})")
     with os.fdopen(os.open(path, flags), "rb") as stream:
-        current = os.fstat(stream.fileno())
-        if not stat.S_ISREG(current.st_mode) or _stat_tuple(current) != _stat_tuple(
-            before
-        ):
-            raise _ChangedDuringScan("Source changed before it could be read")
+        fd = stream.fileno()
+        current = os.fstat(fd)
+        # Windows lstat and fstat can give st_ctime different meanings.
+        use_birthtime = os.name == "nt"
+        if not stat.S_ISREG(current.st_mode) or _stat_tuple(
+            current, use_birthtime=use_birthtime
+        ) != _stat_tuple(before, use_birthtime=use_birthtime):
+            raise _ChangedDuringScan(f"Source changed before it could be read ({path})")
         raw = stream.read(MAX_FILE_BYTES + 1)
-        if _stat_tuple(os.fstat(stream.fileno())) != _stat_tuple(before):
-            raise _ChangedDuringScan("Source changed while it was being read")
+        if _stat_tuple(os.fstat(fd)) != _stat_tuple(current):
+            raise _ChangedDuringScan(f"Source changed while it was being read ({path})")
     return raw
 
 
