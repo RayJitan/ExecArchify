@@ -1,0 +1,3972 @@
+{
+  "tool": "ExecArchify 0.1.0",
+  "release_wheel_sha256": "531bac6b145fd3ff32a4ca41246717ada8683481242837d5bbc5762cadba07e7",
+  "date": "2026-11-24",
+  "host": "Windows",
+  "scope": "Each repository was indexed in an independent Git worktree with no .execarchify.json, no shared repositories, and no generated semantic annotations.",
+  "method": {
+    "architecture": "context(architecture=true), default per-query scan cap 2000",
+    "symbols": "Inventory checked against manual reference files, definitions and start lines. bare_name rank uses resolve(limit=5).",
+    "edges": "Manual, purposive source-anchored examples. trace(direction=out,depth=1,limit=150), exact source/target IDs. For an unavailable assembly label, also inspect incoming neighbors of its sink.",
+    "search": "Top five scope is implementation, not incidental mentions. Results are descriptive, not population precision or recall."
+  },
+  "ARTIQ": {
+    "repository": "m-labs/artiq",
+    "revision": "9e28ee63a6d9b3bdaac6888e40287d75572d353c",
+    "stats": {
+      "files": 746,
+      "symbols": 8267,
+      "references": 38678,
+      "skipped": 14
+    },
+    "groups": [
+      {
+        "name": ".",
+        "files": 12,
+        "symbols": 51
+      },
+      {
+        "name": ".github",
+        "files": 4,
+        "symbols": 24
+      },
+      {
+        "name": "artiq",
+        "files": 698,
+        "symbols": 7934
+      },
+      {
+        "name": "doc",
+        "files": 29,
+        "symbols": 258
+      },
+      {
+        "name": "experimental-features",
+        "files": 3,
+        "symbols": 0
+      }
+    ],
+    "architecture": {
+      "group_edges": [],
+      "group_edges_truncated": true,
+      "reference_scan_count": 2000
+    },
+    "scope": "one root, no manifest or shared repositories, no watch",
+    "markers": [
+      {
+        "key": "scheduler",
+        "source": "artiq/master/scheduler.py",
+        "line": 436,
+        "query": "Scheduler.submit",
+        "rank5": null,
+        "first": {
+          "path": "artiq/dashboard/experiments.py",
+          "qualified": "ExperimentManager.submit",
+          "kind": "method",
+          "line": 619,
+          "id": "s_d53c2c7dd6307c2e17a9222cd966b600",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "token · symbol"
+        },
+        "indexed": {
+          "path": "artiq/master/scheduler.py",
+          "qualified": "Scheduler.submit",
+          "kind": "method",
+          "line": 436,
+          "id": "s_142cd9ee0ced7eb528e34a23060585e0",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        "path_qualified": true
+      },
+      {
+        "key": "host",
+        "source": "artiq/coredevice/core.py",
+        "line": 150,
+        "query": "Core._run_compiled",
+        "rank5": null,
+        "first": {
+          "path": "artiq/applets/simple.py",
+          "qualified": "SimpleApplet.run",
+          "kind": "method",
+          "line": 364,
+          "id": "s_9ccdb95ed3416754be248e55c28e3e6b",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "token · symbol"
+        },
+        "indexed": {
+          "path": "artiq/coredevice/core.py",
+          "qualified": "Core._run_compiled",
+          "kind": "method",
+          "line": 150,
+          "id": "s_a6705a95e8c76613faa58ebbaadca7fa",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        "path_qualified": true
+      },
+      {
+        "key": "satellite",
+        "source": "artiq/gateware/drtio/core.py",
+        "line": 77,
+        "query": "DRTIOSatellite.__init__",
+        "rank5": null,
+        "first": {
+          "path": "artiq/browser/experiments.py",
+          "qualified": "LocalDatasetDB.init",
+          "kind": "method",
+          "line": 280,
+          "id": "s_36d6a096234575e5568e3c530ed104c4",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "token · symbol"
+        },
+        "indexed": {
+          "path": "artiq/gateware/drtio/core.py",
+          "qualified": "DRTIOSatellite.__init__",
+          "kind": "method",
+          "line": 77,
+          "id": "s_543f4079deb6b89d721d13abdd249975",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        "path_qualified": true
+      },
+      {
+        "key": "pulse",
+        "source": "artiq/coredevice/ttl.py",
+        "line": 68,
+        "query": "TTLOut.pulse_mu",
+        "rank5": null,
+        "first": {
+          "path": "artiq/coredevice/phaser.py",
+          "qualified": "Miqro.pulse",
+          "kind": "method",
+          "line": 1626,
+          "id": "s_3a5e27153ea71e1026959df7da3d95f8",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "token · symbol"
+        },
+        "indexed": {
+          "path": "artiq/coredevice/ttl.py",
+          "qualified": "TTLOut.pulse_mu",
+          "kind": "method",
+          "line": 68,
+          "id": "s_bdc1e4ec6b13aa5790116baf811ff852",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        "path_qualified": true
+      },
+      {
+        "key": "abi",
+        "source": "artiq/coredevice/rtio.py",
+        "line": 6,
+        "query": "rtio_output",
+        "rank5": 1,
+        "first": {
+          "path": "artiq/coredevice/rtio.py",
+          "qualified": "rtio_output",
+          "kind": "function",
+          "line": 6,
+          "id": "s_92773530455ef06c719401dbc594f714",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "query · exact symbol"
+        },
+        "indexed": {
+          "path": "artiq/coredevice/rtio.py",
+          "qualified": "rtio_output",
+          "kind": "function",
+          "line": 6,
+          "id": "s_92773530455ef06c719401dbc594f714",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        "path_qualified": true
+      },
+      {
+        "key": "impl",
+        "source": "artiq/firmware/ksupport/rtio.rs",
+        "line": 80,
+        "query": "output",
+        "rank5": 3,
+        "first": {
+          "path": "artiq/coredevice/ttl.py",
+          "qualified": "TTLOut.output",
+          "kind": "method",
+          "line": 44,
+          "id": "s_275c15007c9d78f947ece76ec4a31569",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "query · exact symbol"
+        },
+        "indexed": {
+          "path": "artiq/firmware/ksupport/rtio.rs",
+          "qualified": "imp.output",
+          "kind": "function",
+          "line": 80,
+          "id": "s_77b348a5bd2f13bc72b4c77b5b384de9",
+          "group": "artiq",
+          "confidence": "heuristic"
+        },
+        "path_qualified": false
+      },
+      {
+        "key": "reg",
+        "source": "artiq/firmware/ksupport/rtio.rs",
+        "line": 50,
+        "query": "rtio_o_data_write",
+        "rank5": 1,
+        "first": {
+          "path": "artiq/firmware/ksupport/rtio.rs",
+          "qualified": "imp.rtio_o_data_write",
+          "kind": "function",
+          "line": 50,
+          "id": "s_10a7e2bb43aeda1092436ee4a9a158e3",
+          "group": "artiq",
+          "confidence": "heuristic",
+          "reason": "query · exact symbol"
+        },
+        "indexed": {
+          "path": "artiq/firmware/ksupport/rtio.rs",
+          "qualified": "imp.rtio_o_data_write",
+          "kind": "function",
+          "line": 50,
+          "id": "s_10a7e2bb43aeda1092436ee4a9a158e3",
+          "group": "artiq",
+          "confidence": "heuristic"
+        },
+        "path_qualified": false
+      },
+      {
+        "key": "phy",
+        "source": "artiq/gateware/rtio/phy/ttl_simple.py",
+        "line": 9,
+        "query": "Output.__init__",
+        "rank5": null,
+        "first": {
+          "path": "artiq/browser/experiments.py",
+          "qualified": "LocalDatasetDB.init",
+          "kind": "method",
+          "line": 280,
+          "id": "s_36d6a096234575e5568e3c530ed104c4",
+          "group": "artiq",
+          "confidence": "parsed",
+          "reason": "token · symbol"
+        },
+        "indexed": {
+          "path": "artiq/gateware/rtio/phy/ttl_simple.py",
+          "qualified": "Output.__init__",
+          "kind": "method",
+          "line": 9,
+          "id": "s_616bded9bcfd46c5106bc9e321ecf8a2",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        "path_qualified": true
+      },
+      {
+        "key": "management",
+        "source": "artiq/firmware/satman/main.rs",
+        "line": 495,
+        "query": "process_aux_packets",
+        "rank5": 1,
+        "first": {
+          "path": "artiq/firmware/satman/main.rs",
+          "qualified": "process_aux_packets",
+          "kind": "function",
+          "line": 495,
+          "id": "s_a646a8d940dc6da903e196658e7991bf",
+          "group": "artiq",
+          "confidence": "heuristic",
+          "reason": "query · exact symbol"
+        },
+        "indexed": {
+          "path": "artiq/firmware/satman/main.rs",
+          "qualified": "process_aux_packets",
+          "kind": "function",
+          "line": 495,
+          "id": "s_a646a8d940dc6da903e196658e7991bf",
+          "group": "artiq",
+          "confidence": "heuristic"
+        },
+        "path_qualified": true
+      }
+    ],
+    "traces": [
+      {
+        "test": "host self call",
+        "source": [
+          "artiq/coredevice/core.py",
+          158
+        ],
+        "target": [
+          "artiq/coredevice/core.py",
+          150
+        ],
+        "truth": [
+          "artiq/coredevice/core.py",
+          167
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "parsed",
+            "path": "artiq/coredevice/core.py",
+            "line": 167
+          }
+        ],
+        "source_id": "s_2c36483a4d3d27e572437a843a757987",
+        "truncated": false,
+        "nodes": 4,
+        "edges": 3,
+        "gaps": [
+          "rpc · ambiguous target"
+        ],
+        "target_id": "s_a6705a95e8c76613faa58ebbaadca7fa"
+      },
+      {
+        "test": "host driver dispatch (hardware selected)",
+        "source": [
+          "artiq/coredevice/core.py",
+          150
+        ],
+        "target": [
+          "artiq/coredevice/comm_kernel.py",
+          377
+        ],
+        "truth": [
+          "artiq/coredevice/core.py",
+          154
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [],
+        "source_id": "s_a6705a95e8c76613faa58ebbaadca7fa",
+        "truncated": false,
+        "nodes": 1,
+        "edges": 0,
+        "gaps": [
+          "self.comm.check_system_info · dynamic call target",
+          "self.comm.load · dynamic call target",
+          "self.comm.run · dynamic call target",
+          "self.comm.serve · dynamic call target"
+        ],
+        "target_id": "s_a0ee5ca26226f16f8b8b31a5398a29af"
+      },
+      {
+        "test": "main scheduler to run pool",
+        "source": [
+          "artiq/master/scheduler.py",
+          436
+        ],
+        "target": [
+          "artiq/master/scheduler.py",
+          134
+        ],
+        "truth": [
+          "artiq/master/scheduler.py",
+          455
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [],
+        "source_id": "s_142cd9ee0ced7eb528e34a23060585e0",
+        "truncated": false,
+        "nodes": 2,
+        "edges": 1,
+        "gaps": [
+          "logger.debug · dynamic call target",
+          "pipeline.pool.submit · dynamic call target",
+          "pipeline.start · dynamic call target"
+        ],
+        "target_id": "s_356a09352ab11f831aa63864a0ea4e09"
+      },
+      {
+        "test": "driver pulse to on",
+        "source": [
+          "artiq/coredevice/ttl.py",
+          68
+        ],
+        "target": [
+          "artiq/coredevice/ttl.py",
+          52
+        ],
+        "truth": [
+          "artiq/coredevice/ttl.py",
+          73
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "parsed",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 73
+          }
+        ],
+        "source_id": "s_bdc1e4ec6b13aa5790116baf811ff852",
+        "truncated": false,
+        "nodes": 4,
+        "edges": 3,
+        "gaps": [],
+        "target_id": "s_cdab1d84bc9846154bacea1613654ffc"
+      },
+      {
+        "test": "driver on to setter",
+        "source": [
+          "artiq/coredevice/ttl.py",
+          52
+        ],
+        "target": [
+          "artiq/coredevice/ttl.py",
+          48
+        ],
+        "truth": [
+          "artiq/coredevice/ttl.py",
+          57
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "parsed",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 57
+          }
+        ],
+        "source_id": "s_cdab1d84bc9846154bacea1613654ffc",
+        "truncated": false,
+        "nodes": 2,
+        "edges": 1,
+        "gaps": [],
+        "target_id": "s_b346408cc6581116e840e739b1245c95"
+      },
+      {
+        "test": "driver setter to imported syscall",
+        "source": [
+          "artiq/coredevice/ttl.py",
+          48
+        ],
+        "target": [
+          "artiq/coredevice/rtio.py",
+          6
+        ],
+        "truth": [
+          "artiq/coredevice/ttl.py",
+          49
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "parsed",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 49
+          }
+        ],
+        "source_id": "s_b346408cc6581116e840e739b1245c95",
+        "truncated": false,
+        "nodes": 2,
+        "edges": 1,
+        "gaps": [],
+        "target_id": "s_92773530455ef06c719401dbc594f714"
+      },
+      {
+        "test": "Python syscall to Rust symbol binding",
+        "source": [
+          "artiq/coredevice/rtio.py",
+          6
+        ],
+        "target": [
+          "artiq/firmware/ksupport/rtio.rs",
+          80
+        ],
+        "truth": [
+          "artiq/firmware/ksupport/api.rs",
+          148
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [],
+        "source_id": "s_92773530455ef06c719401dbc594f714",
+        "truncated": false,
+        "nodes": 1,
+        "edges": 0,
+        "gaps": [
+          "NotImplementedError · definition outside index or dynamic"
+        ],
+        "target_id": "s_77b348a5bd2f13bc72b4c77b5b384de9"
+      },
+      {
+        "test": "Rust output to register write",
+        "source": [
+          "artiq/firmware/ksupport/rtio.rs",
+          80
+        ],
+        "target": [
+          "artiq/firmware/ksupport/rtio.rs",
+          50
+        ],
+        "truth": [
+          "artiq/firmware/ksupport/rtio.rs",
+          84
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "heuristic",
+            "path": "artiq/firmware/ksupport/rtio.rs",
+            "line": 84
+          }
+        ],
+        "source_id": "s_77b348a5bd2f13bc72b4c77b5b384de9",
+        "truncated": false,
+        "nodes": 3,
+        "edges": 2,
+        "gaps": [
+          "csr::rtio::o_status_read · definition outside index or dynamic",
+          "csr::rtio::target_write · definition outside index or dynamic"
+        ],
+        "target_id": "s_10a7e2bb43aeda1092436ee4a9a158e3"
+      },
+      {
+        "test": "satellite packet dispatch",
+        "source": [
+          "artiq/firmware/satman/main.rs",
+          495
+        ],
+        "target": [
+          "artiq/firmware/satman/main.rs",
+          128
+        ],
+        "truth": [
+          "artiq/firmware/satman/main.rs",
+          502
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "heuristic",
+            "path": "artiq/firmware/satman/main.rs",
+            "line": 502
+          }
+        ],
+        "source_id": "s_a646a8d940dc6da903e196658e7991bf",
+        "truncated": false,
+        "nodes": 3,
+        "edges": 2,
+        "gaps": [
+          "Err · dynamic call target",
+          "Ok · definition outside index or dynamic",
+          "Some · dynamic call target",
+          "packet.or_else · definition outside index or dynamic",
+          "router.get_local_packet · dynamic call target"
+        ],
+        "target_id": "s_eb887289d532f3e395c2a8f12ddecf13"
+      },
+      {
+        "test": "FPGA PHY to RTLink output interface",
+        "source": [
+          "artiq/gateware/rtio/phy/ttl_simple.py",
+          9
+        ],
+        "target": [
+          "artiq/gateware/rtio/rtlink.py",
+          4
+        ],
+        "truth": [
+          "artiq/gateware/rtio/phy/ttl_simple.py",
+          10
+        ],
+        "scored_as": "one modeled hop with correct source and target",
+        "hits": [
+          {
+            "kind": "call",
+            "confidence": "parsed",
+            "path": "artiq/gateware/rtio/phy/ttl_simple.py",
+            "line": 10
+          }
+        ],
+        "source_id": "s_616bded9bcfd46c5106bc9e321ecf8a2",
+        "truncated": false,
+        "nodes": 3,
+        "edges": 2,
+        "gaps": [
+          "DifferentialOutput · definition outside index or dynamic",
+          "If · definition outside index or dynamic",
+          "If(override_en,\n                pad_o.eq(override_o)\n            ).Else · dynamic call target",
+          "Signal · definition outside index or dynamic",
+          "pad.eq · dynamic call target",
+          "pad_k.eq · dynamic call target",
+          "pad_o.eq · dynamic call target"
+        ],
+        "target_id": "s_c3ed0e534ce7d92a885730150b92bdbe"
+      }
+    ],
+    "terms": [
+      {
+        "query": "RTIOUnderflow",
+        "accepted": [
+          "artiq/coredevice/exceptions.py"
+        ],
+        "rank5": 1,
+        "top5": [
+          {
+            "path": "artiq/coredevice/exceptions.py",
+            "qualified": "RTIOUnderflow",
+            "kind": "class",
+            "line": 119,
+            "id": "s_0595ac22a1bf27ad377095bc58f7f1b3",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "query · exact symbol"
+          },
+          {
+            "path": "artiq/coredevice/__init__.py",
+            "qualified": "artiq/coredevice/__init__.py",
+            "kind": "file",
+            "line": 1,
+            "id": "f_c351cc0a4791011914f6a0f9e6e2580b",
+            "group": "artiq",
+            "confidence": "indexed",
+            "reason": "source text"
+          },
+          {
+            "path": "artiq/test/lit/embedding/exception.py",
+            "qualified": "artiq/test/lit/embedding/exception.py",
+            "kind": "file",
+            "line": 5,
+            "id": "f_d833cd75433321c2143e3c0e4af8f81c",
+            "group": "artiq",
+            "confidence": "indexed",
+            "reason": "source text"
+          },
+          {
+            "path": "artiq/gateware/test/rtio/test_dma.py",
+            "qualified": "artiq/gateware/test/rtio/test_dma.py",
+            "kind": "file",
+            "line": 8,
+            "id": "f_adae5d097b6d1817e332599bf940047a",
+            "group": "artiq",
+            "confidence": "indexed",
+            "reason": "source text"
+          },
+          {
+            "path": "doc/manual/rtio.rst",
+            "qualified": "doc/manual/rtio.rst",
+            "kind": "file",
+            "line": 90,
+            "id": "f_930016a601d32f0a1b4b042577dfb5fb",
+            "group": "doc",
+            "confidence": "indexed",
+            "reason": "source text"
+          }
+        ]
+      },
+      {
+        "query": "RTIOUnderflw",
+        "accepted": [
+          "artiq/coredevice/exceptions.py"
+        ],
+        "rank5": 1,
+        "top5": [
+          {
+            "path": "artiq/coredevice/exceptions.py",
+            "qualified": "RTIOUnderflow",
+            "kind": "class",
+            "line": 119,
+            "id": "s_0595ac22a1bf27ad377095bc58f7f1b3",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "similar spelling"
+          },
+          {
+            "path": "artiq/test/coredevice/test_rtio.py",
+            "qualified": "Underflow",
+            "kind": "class",
+            "line": 320,
+            "id": "s_62abd5de2e890fb809ab519f4b7a3a08",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "similar spelling"
+          },
+          {
+            "path": "artiq/coredevice/exceptions.py",
+            "qualified": "RTIOOverflow",
+            "kind": "class",
+            "line": 128,
+            "id": "s_492f1445bc50d2df61d0a35fe36dcb0a",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "similar spelling"
+          }
+        ]
+      },
+      {
+        "query": "time-stamped digital pulse",
+        "accepted": [
+          "artiq/coredevice/ttl.py",
+          "artiq/gateware/rtio/phy/ttl_simple.py"
+        ],
+        "rank5": 2,
+        "top5": [
+          {
+            "path": "artiq/coredevice/phaser.py",
+            "qualified": "Miqro.pulse",
+            "kind": "method",
+            "line": 1626,
+            "id": "s_3a5e27153ea71e1026959df7da3d95f8",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/coredevice/ttl.py",
+            "qualified": "TTLOut.pulse",
+            "kind": "method",
+            "line": 78,
+            "id": "s_6302b174b33d5c78a5c87b03df2473df",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/coredevice/ttl.py",
+            "qualified": "TTLInOut.pulse",
+            "kind": "method",
+            "line": 204,
+            "id": "s_1a15358257f5261a0f9b76ec59803559",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/coredevice/urukul.py",
+            "qualified": "_RegIOUpdate.pulse",
+            "kind": "method",
+            "line": 111,
+            "id": "s_be4d10de43101c300aad74751d77abaa",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/sim/devices.py",
+            "qualified": "Output.pulse",
+            "kind": "method",
+            "line": 76,
+            "id": "s_015bfcb6c52aa21b405d26c682c5c18c",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          }
+        ]
+      },
+      {
+        "query": "satellite auxiliary packet",
+        "accepted": [
+          "artiq/firmware/satman/main.rs"
+        ],
+        "rank5": null,
+        "top5": [
+          {
+            "path": "artiq/firmware/libproto_artiq/drtioaux_proto.rs",
+            "qualified": "Packet",
+            "kind": "enum",
+            "line": 64,
+            "id": "s_9371d2160577118fac5b9510c392846a",
+            "group": "artiq",
+            "confidence": "heuristic",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/gateware/targets/efc.py",
+            "qualified": "Satellite",
+            "kind": "class",
+            "line": 24,
+            "id": "s_6ac5d150366ea6b096f98c7b0cab9252",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/gateware/drtio/core.py",
+            "qualified": "DRTIOSatellite.__init__",
+            "kind": "method",
+            "line": 77,
+            "id": "s_543f4079deb6b89d721d13abdd249975",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/gateware/drtio/core.py",
+            "qualified": "DRTIOSatellite.get_csrs",
+            "kind": "method",
+            "line": 145,
+            "id": "s_fe0b0103a9409b2912e322a4034592e7",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          },
+          {
+            "path": "artiq/gateware/drtio/rt_errors_satellite.py",
+            "qualified": "RTErrorsSatellite.__init__",
+            "kind": "method",
+            "line": 10,
+            "id": "s_3838c417887084a076b55d81071d5f58",
+            "group": "artiq",
+            "confidence": "parsed",
+            "reason": "token · symbol"
+          }
+        ]
+      },
+      {
+        "query": "定时数字输出脉冲",
+        "accepted": [
+          "artiq/coredevice/ttl.py",
+          "artiq/gateware/rtio/phy/ttl_simple.py"
+        ],
+        "rank5": null,
+        "top5": []
+      }
+    ],
+    "illustrated_trace": {
+      "root": "artiq/coredevice/ttl.py#TTLOut.pulse_mu",
+      "direction": "out",
+      "depth": 3,
+      "limit": 30,
+      "nodes": [
+        {
+          "path": "artiq/coredevice/ttl.py",
+          "qualified": "TTLOut.pulse_mu",
+          "kind": "method",
+          "line": 68,
+          "id": "s_bdc1e4ec6b13aa5790116baf811ff852",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        {
+          "path": "artiq/coredevice/ttl.py",
+          "qualified": "TTLOut.on",
+          "kind": "method",
+          "line": 52,
+          "id": "s_cdab1d84bc9846154bacea1613654ffc",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        {
+          "path": "artiq/language/core.py",
+          "qualified": "delay_mu",
+          "kind": "function",
+          "line": 293,
+          "id": "s_de6337b2c3f9ea8f1e0da8dc3532af2e",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        {
+          "path": "artiq/coredevice/ttl.py",
+          "qualified": "TTLOut.off",
+          "kind": "method",
+          "line": 60,
+          "id": "s_aa0bda5f932cb131648186135f049dc4",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        {
+          "path": "artiq/coredevice/ttl.py",
+          "qualified": "TTLOut.set_o",
+          "kind": "method",
+          "line": 48,
+          "id": "s_b346408cc6581116e840e739b1245c95",
+          "group": "artiq",
+          "confidence": "parsed"
+        },
+        {
+          "path": "artiq/coredevice/rtio.py",
+          "qualified": "rtio_output",
+          "kind": "function",
+          "line": 6,
+          "id": "s_92773530455ef06c719401dbc594f714",
+          "group": "artiq",
+          "confidence": "parsed"
+        }
+      ],
+      "edges": [
+        {
+          "source": "s_bdc1e4ec6b13aa5790116baf811ff852",
+          "target": "s_cdab1d84bc9846154bacea1613654ffc",
+          "kind": "call",
+          "confidence": "parsed",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 73
+        },
+        {
+          "source": "s_bdc1e4ec6b13aa5790116baf811ff852",
+          "target": "s_de6337b2c3f9ea8f1e0da8dc3532af2e",
+          "kind": "call",
+          "confidence": "inferred",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 74
+        },
+        {
+          "source": "s_bdc1e4ec6b13aa5790116baf811ff852",
+          "target": "s_aa0bda5f932cb131648186135f049dc4",
+          "kind": "call",
+          "confidence": "parsed",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 75
+        },
+        {
+          "source": "s_cdab1d84bc9846154bacea1613654ffc",
+          "target": "s_b346408cc6581116e840e739b1245c95",
+          "kind": "call",
+          "confidence": "parsed",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 57
+        },
+        {
+          "source": "s_aa0bda5f932cb131648186135f049dc4",
+          "target": "s_b346408cc6581116e840e739b1245c95",
+          "kind": "call",
+          "confidence": "parsed",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 65
+        },
+        {
+          "source": "s_b346408cc6581116e840e739b1245c95",
+          "target": "s_92773530455ef06c719401dbc594f714",
+          "kind": "call",
+          "confidence": "parsed",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 49
+        }
+      ],
+      "gaps": [
+        "_time_manager.take_time_mu · dynamic call target"
+      ],
+      "truncated": false
+    },
+    "symbol_kinds": {
+      "method": 4036,
+      "function": 1787,
+      "class": 967,
+      "key": 715,
+      "heading": 251,
+      "struct": 133,
+      "mod": 103,
+      "type": 63,
+      "section": 60,
+      "enum": 58,
+      "target": 39,
+      "declaration": 37,
+      "trait": 7,
+      "union": 5,
+      "macro": 4,
+      "object": 2
+    },
+    "bare_names": [
+      {
+        "key": "scheduler",
+        "name": "submit",
+        "indexed_qualified": "Scheduler.submit",
+        "rank5": 5,
+        "path_plus_indexed_qualified": true,
+        "first": "ExperimentManager.submit"
+      },
+      {
+        "key": "host",
+        "name": "_run_compiled",
+        "indexed_qualified": "Core._run_compiled",
+        "rank5": 1,
+        "path_plus_indexed_qualified": true,
+        "first": "Core._run_compiled"
+      },
+      {
+        "key": "satellite",
+        "name": "__init__",
+        "indexed_qualified": "DRTIOSatellite.__init__",
+        "rank5": null,
+        "path_plus_indexed_qualified": true,
+        "first": "AppDirs.__init__"
+      },
+      {
+        "key": "pulse",
+        "name": "pulse_mu",
+        "indexed_qualified": "TTLOut.pulse_mu",
+        "rank5": 2,
+        "path_plus_indexed_qualified": true,
+        "first": "Miqro.pulse_mu"
+      },
+      {
+        "key": "abi",
+        "name": "rtio_output",
+        "indexed_qualified": "rtio_output",
+        "rank5": 1,
+        "path_plus_indexed_qualified": true,
+        "first": "rtio_output"
+      },
+      {
+        "key": "impl",
+        "name": "output",
+        "indexed_qualified": "imp.output",
+        "rank5": 3,
+        "path_plus_indexed_qualified": false,
+        "first": "TTLOut.output"
+      },
+      {
+        "key": "reg",
+        "name": "rtio_o_data_write",
+        "indexed_qualified": "imp.rtio_o_data_write",
+        "rank5": 1,
+        "path_plus_indexed_qualified": true,
+        "first": "imp.rtio_o_data_write"
+      },
+      {
+        "key": "phy",
+        "name": "__init__",
+        "indexed_qualified": "Output.__init__",
+        "rank5": null,
+        "path_plus_indexed_qualified": true,
+        "first": "AppDirs.__init__"
+      },
+      {
+        "key": "management",
+        "name": "process_aux_packets",
+        "indexed_qualified": "process_aux_packets",
+        "rank5": 1,
+        "path_plus_indexed_qualified": true,
+        "first": "process_aux_packets"
+      }
+    ],
+    "historical_impact": {
+      "base": "3d0c3cc1cf84a1b6688afa4b41ba0c7789717915",
+      "head": "fae95e73ada0e541383429fe4ef67ee114715951",
+      "changes": [
+        {
+          "repo": "root",
+          "path": "artiq/coredevice/ttl.py",
+          "status": "modified",
+          "old_lines": [
+            [
+              32,
+              32
+            ],
+            [
+              44,
+              44
+            ],
+            [
+              109,
+              109
+            ],
+            [
+              117,
+              117
+            ],
+            [
+              139,
+              139
+            ],
+            [
+              184,
+              184
+            ],
+            [
+              358,
+              358
+            ],
+            [
+              395,
+              395
+            ],
+            [
+              401,
+              401
+            ],
+            [
+              414,
+              414
+            ],
+            [
+              435,
+              435
+            ],
+            [
+              475,
+              475
+            ]
+          ],
+          "new_lines": [
+            [
+              32,
+              32
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              45,
+              45
+            ],
+            [
+              110,
+              111
+            ],
+            [
+              116,
+              119
+            ],
+            [
+              123,
+              123
+            ],
+            [
+              145,
+              145
+            ],
+            [
+              190,
+              190
+            ],
+            [
+              364,
+              364
+            ],
+            [
+              401,
+              401
+            ],
+            [
+              407,
+              407
+            ],
+            [
+              420,
+              420
+            ],
+            [
+              441,
+              441
+            ],
+            [
+              446,
+              446
+            ],
+            [
+              482,
+              482
+            ]
+          ]
+        }
+      ],
+      "truncated": false,
+      "depth": 2,
+      "gaps": [
+        "i2c::stop · ambiguous target",
+        "profiler::stop · ambiguous target",
+        "set · ambiguous target",
+        "stop · ambiguous target"
+      ],
+      "buckets": {
+        "changed_symbols": [
+          {
+            "id": "s_4e2137baa8fe606c6766e0985b907735",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 25,
+            "end_line": 81,
+            "qualified": "TTLOut",
+            "kind": "class",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_b346408cc6581116e840e739b1245c95",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 44,
+            "end_line": 45,
+            "qualified": "TTLOut.set_o",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_d7ee57032fdd25b2561e51fd6e69bb67",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 84,
+            "end_line": 427,
+            "qualified": "TTLInOut",
+            "kind": "class",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_66c097a2652bd3d0ada1310cb6155871",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 122,
+            "end_line": 123,
+            "qualified": "TTLInOut.set_oe",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_8f29ae7bca7c52cd71134ff336c3cbd9",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 144,
+            "end_line": 145,
+            "qualified": "TTLInOut.set_o",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_6c9364306a27096311d42fe8cf9a6a9b",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 189,
+            "end_line": 190,
+            "qualified": "TTLInOut._set_sensitivity",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_4ae5baccc2ea67ac4919d1179da4974c",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 359,
+            "end_line": 364,
+            "qualified": "TTLInOut.sample_input",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_b50457d54ddc7a6d9f5ba5f8c1dc0255",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 390,
+            "end_line": 402,
+            "qualified": "TTLInOut.watch_stay_on",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_862833a00921864e684277c3a6382f58",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 405,
+            "end_line": 408,
+            "qualified": "TTLInOut.watch_stay_off",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_9cc7d38dcb52664142137555e9b85539",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 411,
+            "end_line": 427,
+            "qualified": "TTLInOut.watch_done",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_92add837c1beaa89629d8a999a2e9133",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 430,
+            "end_line": 492,
+            "qualified": "TTLClockGen",
+            "kind": "class",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_2e69bb709bf0d5722f70093bebaa168b",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 465,
+            "end_line": 482,
+            "qualified": "TTLClockGen.set_mu",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_0df4f1e8c68d308da38406b1e174dd7d",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 34,
+            "end_line": 37,
+            "qualified": "TTLOut.__init__",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_980d2a1c587db84cfe7f2493e79c9f0f",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 113,
+            "end_line": 119,
+            "qualified": "TTLInOut.__init__",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_2e2adddb28bef01b84acef6fcace9a28",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 443,
+            "end_line": 448,
+            "qualified": "TTLClockGen.__init__",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "changed source range",
+            "confidence": "parsed",
+            "side": "head"
+          }
+        ],
+        "direct": [
+          {
+            "id": "s_aa0bda5f932cb131648186135f049dc4",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 56,
+            "end_line": 61,
+            "qualified": "TTLOut.off",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:61",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_cdab1d84bc9846154bacea1613654ffc",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 48,
+            "end_line": 53,
+            "qualified": "TTLOut.on",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:53",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_56933ce872f7bb6ccead0e3840833ccf",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 126,
+            "end_line": 132,
+            "qualified": "TTLInOut.output",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:132",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_8aee981a3dca9bdd5d75ac2d8968a314",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 135,
+            "end_line": 141,
+            "qualified": "TTLInOut.input",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:141",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_38d745e7bb7012b311a9a7022785bb45",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 148,
+            "end_line": 155,
+            "qualified": "TTLInOut.on",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:155",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_6d090999465b700e85df9faab243f38d",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 158,
+            "end_line": 165,
+            "qualified": "TTLInOut.off",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:165",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_211b3874dcd0e76cce4a5c7ad2277067",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 269,
+            "end_line": 281,
+            "qualified": "TTLInOut.gate_both",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:278",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_39853bff20090a0b4f89950011d3ec5e",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 253,
+            "end_line": 266,
+            "qualified": "TTLInOut.gate_falling",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:263",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_8215fb8ee2acb46c0ce472b23a0d0d18",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 238,
+            "end_line": 250,
+            "qualified": "TTLInOut.gate_rising",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:247",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_96b68e91dfc65879ad63dc9164c68056",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 223,
+            "end_line": 235,
+            "qualified": "TTLInOut.gate_both_mu",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:232",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_ab537df2906b946f88aa0cf48be2dc3f",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 193,
+            "end_line": 205,
+            "qualified": "TTLInOut.gate_rising_mu",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:202",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_b4d82bd1da5d20acd659fbcb3aee9a5d",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 208,
+            "end_line": 220,
+            "qualified": "TTLInOut.gate_falling_mu",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:217",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_fe923659a35f53cc901b1365a65ae163",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 379,
+            "end_line": 386,
+            "qualified": "TTLInOut.sample_get_nonrt",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:383",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_5509663a8bc2df7b259faa76c36fead5",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 485,
+            "end_line": 487,
+            "qualified": "TTLClockGen.set",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:487",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_a28f2591289b8481725158d2bed75c3d",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 490,
+            "end_line": 492,
+            "qualified": "TTLClockGen.stop",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "1 hop(s) via call at artiq/coredevice/ttl.py:492",
+            "confidence": "parsed",
+            "side": "head"
+          }
+        ],
+        "indirect": [
+          {
+            "id": "s_6302b174b33d5c78a5c87b03df2473df",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 74,
+            "end_line": 81,
+            "qualified": "TTLOut.pulse",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/coredevice/ttl.py:81",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_bdc1e4ec6b13aa5790116baf811ff852",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 64,
+            "end_line": 71,
+            "qualified": "TTLOut.pulse_mu",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/coredevice/ttl.py:71",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_1a15358257f5261a0f9b76ec59803559",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 178,
+            "end_line": 185,
+            "qualified": "TTLInOut.pulse",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/coredevice/ttl.py:183",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_3a8644d3b850a75b5fc7cb074e5d85ef",
+            "path": "artiq/coredevice/ttl.py",
+            "line": 168,
+            "end_line": 175,
+            "qualified": "TTLInOut.pulse_mu",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/coredevice/ttl.py:173",
+            "confidence": "parsed",
+            "side": "head"
+          }
+        ],
+        "possible": [
+          {
+            "id": "s_64867f76f7245309c58f23678da733df",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 231,
+            "end_line": 258,
+            "qualified": "KasliTester.test_samplers",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:238",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_731efb03d380fb2e8a502e2ea258cb7f",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 302,
+            "end_line": 314,
+            "qualified": "KasliTester.test_grabbers",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:307",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_87a82d2719807917abad0949b3e502da",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 157,
+            "end_line": 170,
+            "qualified": "KasliTester.test_ttl_ins",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:166",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_af198cee3518ced25909f519c3be1fcd",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 272,
+            "end_line": 280,
+            "qualified": "KasliTester.test_zotinos",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:280",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_d27cf1f1c26933243e9c1096dac63133",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 198,
+            "end_line": 217,
+            "qualified": "KasliTester.test_urukuls",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:214",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_e88caf4c7b66038233733d5556756a48",
+            "path": "artiq/frontend/artiq_rpctool.py",
+            "line": 63,
+            "end_line": 93,
+            "qualified": "interactive",
+            "kind": "function",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/frontend/artiq_rpctool.py:72",
+            "confidence": "parsed",
+            "side": "head"
+          }
+        ],
+        "tests": [
+          {
+            "id": "s_64867f76f7245309c58f23678da733df",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 231,
+            "end_line": 258,
+            "qualified": "KasliTester.test_samplers",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:238",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_731efb03d380fb2e8a502e2ea258cb7f",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 302,
+            "end_line": 314,
+            "qualified": "KasliTester.test_grabbers",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:307",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_87a82d2719807917abad0949b3e502da",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 157,
+            "end_line": 170,
+            "qualified": "KasliTester.test_ttl_ins",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:166",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_af198cee3518ced25909f519c3be1fcd",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 272,
+            "end_line": 280,
+            "qualified": "KasliTester.test_zotinos",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:280",
+            "confidence": "parsed",
+            "side": "head"
+          },
+          {
+            "id": "s_d27cf1f1c26933243e9c1096dac63133",
+            "path": "artiq/examples/kasli_basic/repository/kasli_tester.py",
+            "line": 198,
+            "end_line": 217,
+            "qualified": "KasliTester.test_urukuls",
+            "kind": "method",
+            "group": "artiq",
+            "reason": "2 hop(s) via call at artiq/examples/kasli_basic/repository/kasli_tester.py:214",
+            "confidence": "parsed",
+            "side": "head"
+          }
+        ]
+      }
+    },
+    "export": {
+      "components": 5,
+      "connections": 0,
+      "format": "Archify IR v1, full CLI export"
+    },
+    "fresh_mcp_session": {
+      "protocol": "2025-06-18",
+      "context_stats": {
+        "files": 746,
+        "symbols": 8267,
+        "references": 38678,
+        "skipped": 14
+      },
+      "scope_count": 1,
+      "query": {
+        "name": "trace",
+        "arguments": {
+          "id": "artiq/coredevice/ttl.py#TTLOut.pulse_mu",
+          "direction": "out",
+          "depth": 3,
+          "limit": 30
+        }
+      },
+      "shown_nodes": [
+        {
+          "qualified": "TTLOut.pulse_mu",
+          "kind": "method",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 68
+        },
+        {
+          "qualified": "TTLOut.on",
+          "kind": "method",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 52
+        },
+        {
+          "qualified": "delay_mu",
+          "kind": "function",
+          "path": "artiq/language/core.py",
+          "line": 293
+        },
+        {
+          "qualified": "TTLOut.off",
+          "kind": "method",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 60
+        },
+        {
+          "qualified": "TTLOut.set_o",
+          "kind": "method",
+          "path": "artiq/coredevice/ttl.py",
+          "line": 48
+        },
+        {
+          "qualified": "rtio_output",
+          "kind": "function",
+          "path": "artiq/coredevice/rtio.py",
+          "line": 6
+        }
+      ],
+      "shown_edges": 6,
+      "results": [],
+      "gaps": [
+        "_time_manager.take_time_mu · dynamic call target"
+      ],
+      "truncated": false
+    }
+  },
+  "Klipper": {
+    "repository": "Klipper3d/klipper",
+    "revision": "61c0c8d2ef40340781835dd53fb04cc7a454e37a",
+    "stats": {
+      "files": 2102,
+      "symbols": 453518,
+      "references": 42529,
+      "skipped": 181
+    },
+    "groups": [
+      {
+        "name": ".",
+        "files": 4,
+        "symbols": 8
+      },
+      {
+        "name": ".github",
+        "files": 7,
+        "symbols": 152
+      },
+      {
+        "name": "config",
+        "files": 225,
+        "symbols": 18974
+      },
+      {
+        "name": "docs",
+        "files": 87,
+        "symbols": 974
+      },
+      {
+        "name": "klippy",
+        "files": 200,
+        "symbols": 4312
+      },
+      {
+        "name": "lib",
+        "files": 1169,
+        "symbols": 423893
+      },
+      {
+        "name": "scripts",
+        "files": 53,
+        "symbols": 634
+      },
+      {
+        "name": "src",
+        "files": 262,
+        "symbols": 3061
+      },
+      {
+        "name": "test",
+        "files": 95,
+        "symbols": 1510
+      }
+    ],
+    "languages": {
+      "c": 1358,
+      "ini": 252,
+      "python": 207,
+      "text": 136,
+      "markdown": 57,
+      "cpp": 32,
+      "shell": 18,
+      "xml": 16,
+      "make": 16,
+      "yaml": 8,
+      "dockerfile": 1,
+      "css": 1
+    },
+    "symbol_kinds": {
+      "macro": 410535,
+      "key": 18304,
+      "declaration": 7174,
+      "function": 3782,
+      "method": 3347,
+      "section": 3042,
+      "union": 2382,
+      "struct": 1631,
+      "type": 1398,
+      "heading": 912,
+      "class": 488,
+      "enum": 480,
+      "target": 43
+    },
+    "architecture": {
+      "reference_scan_count": 2000,
+      "group_edges": [],
+      "group_edges_truncated": true
+    },
+    "markers": [
+      {
+        "landmark": {
+          "id": "s_3adc161075175c5733d9b93e016105d8",
+          "path": "klippy/extras/gcode_move.py",
+          "line": 113,
+          "end_line": 143,
+          "qualified": "GCodeMove.cmd_G1",
+          "kind": "method",
+          "confidence": "parsed"
+        },
+        "query": "cmd_G1",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_3adc161075175c5733d9b93e016105d8",
+            "path": "klippy/extras/gcode_move.py",
+            "line": 113,
+            "end_line": 143,
+            "qualified": "GCodeMove.cmd_G1",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_806fed70b951618771a98bb77a06fe7f",
+            "path": "klippy/extras/gcode_macro.py",
+            "line": 186,
+            "end_line": 197,
+            "qualified": "GCodeMacro.cmd",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "token · symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_ca98627aa9b86d10af7b3105a51e2a77",
+            "path": "klippy/extras/firmware_retraction.py",
+            "line": 53,
+            "end_line": 61,
+            "qualified": "FirmwareRetraction.cmd_G10",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_e3f6c275857550cdb68c1a84f0750871",
+            "path": "klippy/extras/firmware_retraction.py",
+            "line": 63,
+            "end_line": 71,
+            "qualified": "FirmwareRetraction.cmd_G11",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_5f5cd2a19acc8cb1c72fe8639787e2c4",
+            "path": "klippy/extras/gcode_arcs.py",
+            "line": 51,
+            "end_line": 52,
+            "qualified": "ArcSupport.cmd_G17",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · symbol",
+            "confidence": "parsed"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_68ef13e6f249b6fc842ef7f22028847d",
+          "path": "klippy/toolhead.py",
+          "line": 472,
+          "end_line": 483,
+          "qualified": "ToolHead.move",
+          "kind": "method",
+          "confidence": "parsed"
+        },
+        "query": "move",
+        "rank5": null,
+        "top5": [
+          {
+            "id": "s_9fb2de9a8f71ed4f01e444f50b797281",
+            "path": "klippy/chelper/trapq.h",
+            "line": 15,
+            "end_line": 21,
+            "qualified": "move",
+            "kind": "struct",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_3a9de3e940f395c69afc965269f4cb02",
+            "path": "klippy/extras/bed_mesh.py",
+            "line": 207,
+            "end_line": 227,
+            "qualified": "BedMesh.move",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_8e22a8c97c3a642da17ea3836f6c73d3",
+            "path": "klippy/extras/bed_screws.py",
+            "line": 44,
+            "end_line": 50,
+            "qualified": "BedScrews.move",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_8c4fc71ca6b41309f5f4645d47912b03",
+            "path": "klippy/extras/bed_tilt.py",
+            "line": 29,
+            "end_line": 32,
+            "qualified": "BedTilt.move",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_650f2cf9df4ee3797208fe2b516ee0a7",
+            "path": "klippy/extras/exclude_object.py",
+            "line": 180,
+            "end_line": 193,
+            "qualified": "ExcludeObject.move",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_d1e786b299b5445a5bd12ec115b2438f",
+          "path": "klippy/stepper.py",
+          "line": 237,
+          "end_line": 251,
+          "qualified": "MCU_stepper.generate_steps",
+          "kind": "method",
+          "confidence": "parsed"
+        },
+        "query": "generate_steps",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_d1e786b299b5445a5bd12ec115b2438f",
+            "path": "klippy/stepper.py",
+            "line": 237,
+            "end_line": 251,
+            "qualified": "MCU_stepper.generate_steps",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_49fa7254a635ce35176dd02a9754a8a9",
+            "path": "klippy/stepper.py",
+            "line": 434,
+            "end_line": 436,
+            "qualified": "PrinterRail.generate_steps",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_4302c402a6012fd8a473bee3ca59f367",
+            "path": ".github/workflows/build-test.yaml",
+            "line": 8,
+            "end_line": 8,
+            "qualified": "jobs.build.steps",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_13ce0bb01fb0f7018ee7737f5a7ac828",
+            "path": ".github/workflows/invalid-label-bot.yaml",
+            "line": 10,
+            "end_line": 10,
+            "qualified": "jobs.comment.steps",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_050190e5ffcb6bfe585d5463561fb2f2",
+            "path": ".github/workflows/klipper3d-deploy.yaml",
+            "line": 14,
+            "end_line": 14,
+            "qualified": "jobs.deploy.steps",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_0a0c1185c08864eadda0f7141b4fa534",
+          "path": "klippy/stepper.py",
+          "line": 75,
+          "end_line": 126,
+          "qualified": "MCU_stepper._build_config",
+          "kind": "method",
+          "confidence": "parsed"
+        },
+        "query": "_build_config",
+        "rank5": null,
+        "top5": [
+          {
+            "id": "s_16e1cbca9254bedc73be4d08ac77901f",
+            "path": "klippy/extras/ads1220.py",
+            "line": 107,
+            "end_line": 112,
+            "qualified": "ADS1220._build_config",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_25b9f13a892389f5f161f0addbff4039",
+            "path": "klippy/extras/adxl345.py",
+            "line": 220,
+            "end_line": 225,
+            "qualified": "ADXL345._build_config",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_4322b2bd5d3fd1b659ead404a2822387",
+            "path": "klippy/extras/angle.py",
+            "line": 317,
+            "end_line": 322,
+            "qualified": "HelperTLE5012B._build_config",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_c62521b7a6c0b2982ef4069cffc451c0",
+            "path": "klippy/extras/angle.py",
+            "line": 431,
+            "end_line": 436,
+            "qualified": "HelperMT6816._build_config",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          },
+          {
+            "id": "s_8edaa8a030f3b4cda4111bc1138f2b83",
+            "path": "klippy/extras/angle.py",
+            "line": 487,
+            "end_line": 492,
+            "qualified": "HelperMT6826S._build_config",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "parsed"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_a1d11367f11adac93f5102072aab95ab",
+          "path": "klippy/chelper/itersolve.c",
+          "line": 147,
+          "end_line": 212,
+          "qualified": "itersolve_generate_steps",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "itersolve_generate_steps",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_a1d11367f11adac93f5102072aab95ab",
+            "path": "klippy/chelper/itersolve.c",
+            "line": 147,
+            "end_line": 212,
+            "qualified": "itersolve_generate_steps",
+            "kind": "function",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_9d02aa2cccd1109738efa51f9b4ff744",
+            "path": "klippy/chelper/itersolve.h",
+            "line": 28,
+            "end_line": 29,
+            "qualified": "itersolve_generate_steps",
+            "kind": "declaration",
+            "group": "klippy",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_4302c402a6012fd8a473bee3ca59f367",
+            "path": ".github/workflows/build-test.yaml",
+            "line": 8,
+            "end_line": 8,
+            "qualified": "jobs.build.steps",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_13ce0bb01fb0f7018ee7737f5a7ac828",
+            "path": ".github/workflows/invalid-label-bot.yaml",
+            "line": 10,
+            "end_line": 10,
+            "qualified": "jobs.comment.steps",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_050190e5ffcb6bfe585d5463561fb2f2",
+            "path": ".github/workflows/klipper3d-deploy.yaml",
+            "line": 14,
+            "end_line": 14,
+            "qualified": "jobs.deploy.steps",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_3c674afb51e549b016ec8e6aa9f5ae62",
+          "path": "src/stepper.c",
+          "line": 234,
+          "end_line": 263,
+          "qualified": "command_queue_step",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "command_queue_step",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_3c674afb51e549b016ec8e6aa9f5ae62",
+            "path": "src/stepper.c",
+            "line": 234,
+            "end_line": 263,
+            "qualified": "command_queue_step",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_693cacae0942d07d06f0458435302ba1",
+            "path": ".github/workflows/invalid-label-bot.yaml",
+            "line": 11,
+            "end_line": 11,
+            "qualified": "jobs.comment.steps.uses",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_37786db93ee00f02bb693cf10b5e7e3f",
+            "path": ".github/workflows/invalid-label-bot.yaml",
+            "line": 12,
+            "end_line": 12,
+            "qualified": "jobs.comment.steps.with",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_ec8dd615cc7f5bb458b2ee4a9ee5f470",
+            "path": ".github/workflows/klipper3d-deploy.yaml",
+            "line": 15,
+            "end_line": 15,
+            "qualified": "jobs.deploy.steps.uses",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_9f5808aa774cd1923dcd3cb8e8bbf09f",
+            "path": ".github/workflows/klipper3d-deploy.yaml",
+            "line": 16,
+            "end_line": 16,
+            "qualified": "jobs.deploy.steps.name",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_6ac4fb7d0d9ded17a50c279d7279dedc",
+          "path": "src/sched.c",
+          "line": 86,
+          "end_line": 107,
+          "qualified": "sched_add_timer",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "sched_add_timer",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_6ac4fb7d0d9ded17a50c279d7279dedc",
+            "path": "src/sched.c",
+            "line": 86,
+            "end_line": 107,
+            "qualified": "sched_add_timer",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_185c078031b42268656412899c2f9ca6",
+            "path": "src/sched.h",
+            "line": 29,
+            "end_line": 29,
+            "qualified": "sched_add_timer",
+            "kind": "declaration",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_007666177d001f1c0b61cdbc27f21cdf",
+            "path": ".github/workflows/klipper3d-deploy.yaml",
+            "line": 4,
+            "end_line": 4,
+            "qualified": "on.schedule.cron",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_b6d27156020e0325f3463c2dcd735a54",
+            "path": ".github/workflows/reviewer-needed-label.yaml",
+            "line": 8,
+            "end_line": 8,
+            "qualified": "jobs.add_comment.if",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_0635f639c58d45b46f1e48d0ec7ee540",
+            "path": ".github/workflows/stale-issue-bot.yaml",
+            "line": 5,
+            "end_line": 5,
+            "qualified": "on.schedule.cron",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_befedaf23532a77037a88a5c608dc54c",
+          "path": "src/sched.c",
+          "line": 147,
+          "end_line": 179,
+          "qualified": "sched_timer_dispatch",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "sched_timer_dispatch",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_befedaf23532a77037a88a5c608dc54c",
+            "path": "src/sched.c",
+            "line": 147,
+            "end_line": 179,
+            "qualified": "sched_timer_dispatch",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_1b9e0f5631ffd20b77e2eeccdf2ba61a",
+            "path": "src/sched.h",
+            "line": 31,
+            "end_line": 31,
+            "qualified": "sched_timer_dispatch",
+            "kind": "declaration",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_007666177d001f1c0b61cdbc27f21cdf",
+            "path": ".github/workflows/klipper3d-deploy.yaml",
+            "line": 4,
+            "end_line": 4,
+            "qualified": "on.schedule.cron",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_0635f639c58d45b46f1e48d0ec7ee540",
+            "path": ".github/workflows/stale-issue-bot.yaml",
+            "line": 5,
+            "end_line": 5,
+            "qualified": "on.schedule.cron",
+            "kind": "key",
+            "group": ".github",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_a98326fcbb31f6504d584af76dc2e94e",
+            "path": "klippy/gcode.py",
+            "line": 91,
+            "end_line": 113,
+            "qualified": "GCodeDispatch.__init__",
+            "kind": "method",
+            "group": "klippy",
+            "reason": "token · symbol",
+            "confidence": "parsed"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_48180b239659191c3de705e79fed348b",
+          "path": "src/stepper.c",
+          "line": 185,
+          "end_line": 192,
+          "qualified": "stepper_event",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "stepper_event",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_48180b239659191c3de705e79fed348b",
+            "path": "src/stepper.c",
+            "line": 185,
+            "end_line": 192,
+            "qualified": "stepper_event",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_96aa205ab66c33f47b38b21f842552c9",
+            "path": "src/stepper.h",
+            "line": 6,
+            "end_line": 6,
+            "qualified": "stepper_event",
+            "kind": "declaration",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_ec009f4f4d7abb669a973ee6903d2fde",
+            "path": "config/example-cartesian.cfg",
+            "line": 12,
+            "end_line": 12,
+            "qualified": "stepper_x.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_5995a37929f9eb7d5cc6f1a35d30e58f",
+            "path": "config/example-cartesian.cfg",
+            "line": 22,
+            "end_line": 22,
+            "qualified": "stepper_y.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_0712cab0b7133b11209cab660552c9fc",
+            "path": "config/example-cartesian.cfg",
+            "line": 32,
+            "end_line": 32,
+            "qualified": "stepper_z.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_2a6325cf98eda9b9003711f4a3035d08",
+          "path": "src/stepper.c",
+          "line": 132,
+          "end_line": 148,
+          "qualified": "stepper_event_avr",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "stepper_event_avr",
+        "rank5": 1,
+        "top5": [
+          {
+            "id": "s_2a6325cf98eda9b9003711f4a3035d08",
+            "path": "src/stepper.c",
+            "line": 132,
+            "end_line": 148,
+            "qualified": "stepper_event_avr",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_ec009f4f4d7abb669a973ee6903d2fde",
+            "path": "config/example-cartesian.cfg",
+            "line": 12,
+            "end_line": 12,
+            "qualified": "stepper_x.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_5995a37929f9eb7d5cc6f1a35d30e58f",
+            "path": "config/example-cartesian.cfg",
+            "line": 22,
+            "end_line": 22,
+            "qualified": "stepper_y.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_0712cab0b7133b11209cab660552c9fc",
+            "path": "config/example-cartesian.cfg",
+            "line": 32,
+            "end_line": 32,
+            "qualified": "stepper_z.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_0d5a002bb7c75820ee5d6c1728f804e6",
+            "path": "config/example-corexy.cfg",
+            "line": 12,
+            "end_line": 12,
+            "qualified": "stepper_x.dir_pin",
+            "kind": "key",
+            "group": "config",
+            "reason": "token · symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "landmark": {
+          "id": "s_09ec2077aa0a88717cb571bca86b3534",
+          "path": "src/avr/gpio.c",
+          "line": 79,
+          "end_line": 82,
+          "qualified": "gpio_out_toggle_noirq",
+          "kind": "function",
+          "confidence": "heuristic"
+        },
+        "query": "gpio_out_toggle_noirq",
+        "rank5": null,
+        "top5": [
+          {
+            "id": "s_0752482c2eb95002c11e8dfbbc621326",
+            "path": "src/ar100/gpio.c",
+            "line": 109,
+            "end_line": 112,
+            "qualified": "gpio_out_toggle_noirq",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_36d6cea26d49987c36bd5ff093700ba1",
+            "path": "src/ar100/gpio.h",
+            "line": 28,
+            "end_line": 28,
+            "qualified": "gpio_out_toggle_noirq",
+            "kind": "declaration",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_1ed5d14424001a2b3bf4193846b910ca",
+            "path": "src/atsam/gpio.c",
+            "line": 131,
+            "end_line": 135,
+            "qualified": "gpio_out_toggle_noirq",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_a7a48470563a826cd1284ab501b24eff",
+            "path": "src/atsam/gpio.h",
+            "line": 12,
+            "end_line": 12,
+            "qualified": "gpio_out_toggle_noirq",
+            "kind": "declaration",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          },
+          {
+            "id": "s_a0422cae89fe22d260afe9d9d4f9930d",
+            "path": "src/atsamd/gpio.c",
+            "line": 91,
+            "end_line": 95,
+            "qualified": "gpio_out_toggle_noirq",
+            "kind": "function",
+            "group": "src",
+            "reason": "query · exact symbol",
+            "confidence": "heuristic"
+          }
+        ]
+      }
+    ],
+    "traces": [
+      {
+        "source": "klippy/extras/gcode_move.py#GCodeMove.cmd_G1",
+        "target": "klippy/toolhead.py#ToolHead.move",
+        "truth": "default dynamic alias",
+        "source_anchors": "klippy/extras/gcode_move.py:56,143",
+        "observed": {
+          "nodes": 1,
+          "edges": 0,
+          "gaps": [
+            "enumerate · definition outside index or dynamic",
+            "float · definition outside index or dynamic",
+            "gcmd.error · dynamic call target",
+            "gcmd.get_command_parameters · dynamic call target",
+            "gcmd.get_commandline · dynamic call target",
+            "self.move_with_transform · definition outside index or dynamic"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "klippy/stepper.py#MCU_stepper.generate_steps",
+        "target": "klippy/chelper/itersolve.c#itersolve_generate_steps",
+        "truth": "CFFI dynamic alias",
+        "source_anchors": "klippy/stepper.py:51,249",
+        "observed": {
+          "nodes": 2,
+          "edges": 1,
+          "gaps": [
+            "cb · dynamic call target",
+            "self._itersolve_check_active · definition outside index or dynamic",
+            "self._itersolve_generate_steps · definition outside index or dynamic"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "klippy/stepper.py#MCU_stepper._build_config",
+        "target": "src/stepper.c#command_queue_step",
+        "truth": "protocol command tag lookup + registration",
+        "source_anchors": "klippy/stepper.py:113-114; src/stepper.c:264-265",
+        "observed": {
+          "nodes": 2,
+          "edges": 1,
+          "gaps": [
+            "constants.get · dynamic call target",
+            "ffi_lib.stepcompress_fill · dynamic call target",
+            "int · definition outside index or dynamic",
+            "self._mcu.add_config_cmd · dynamic call target",
+            "self._mcu.get_constants · dynamic call target",
+            "self._mcu.get_max_stepper_error · dynamic call target",
+            "self._mcu.lookup_command · dynamic call target",
+            "self._mcu.lookup_command(\n            \"queue_step oid=%c interval=%u count=%hu add=%hi\").get_command_tag · dynamic call target",
+            "self._mcu.lookup_command(\n            \"reset_step_clock oid=%c clock=%u\").get_command_tag · dynamic call target",
+            "self._mcu.lookup_command(\n            \"set_next_step_dir oid=%c dir=%c\").get_command_tag · dynamic call target",
+            "self._mcu.lookup_query_command · dynamic call target",
+            "self._mcu.seconds_to_clock · dynamic call target"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "src/stepper.c#command_queue_step",
+        "target": "src/sched.c#sched_add_timer",
+        "truth": "direct C call",
+        "source_anchors": "src/stepper.c:260",
+        "observed": {
+          "nodes": 4,
+          "edges": 3,
+          "gaps": [
+            "irq_disable · ambiguous target",
+            "irq_enable · ambiguous target",
+            "move_alloc · ambiguous target",
+            "move_free · ambiguous target",
+            "move_queue_push · ambiguous target",
+            "sched_add_timer · ambiguous target"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "src/sched.c#sched_timer_dispatch",
+        "target": "src/stepper.c#stepper_event",
+        "truth": "direct C optimized-path call",
+        "source_anchors": "src/sched.c:154",
+        "observed": {
+          "nodes": 2,
+          "edges": 1,
+          "gaps": [
+            "likely · ambiguous target",
+            "stepper_event · ambiguous target",
+            "timer_is_before · ambiguous target",
+            "unlikely · ambiguous target"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "src/stepper.c#stepper_event",
+        "target": "src/stepper.c#stepper_event_avr",
+        "truth": "direct C AVR-path call",
+        "source_anchors": "src/stepper.c:190",
+        "observed": {
+          "nodes": 4,
+          "edges": 3,
+          "gaps": [],
+          "truncated": false
+        },
+        "hits": [
+          {
+            "source": "s_48180b239659191c3de705e79fed348b",
+            "target": "s_2a6325cf98eda9b9003711f4a3035d08",
+            "path": "src/stepper.c",
+            "line": 190,
+            "kind": "call",
+            "confidence": "heuristic"
+          }
+        ]
+      },
+      {
+        "source": "src/stepper.c#stepper_event_avr",
+        "target": "src/avr/gpio.c#gpio_out_toggle_noirq",
+        "truth": "direct C board GPIO wrapper call",
+        "source_anchors": "src/stepper.c:135; src/avr/gpio.c:79-81",
+        "observed": {
+          "nodes": 2,
+          "edges": 1,
+          "gaps": [
+            "container_of · ambiguous target",
+            "gpio_out_toggle_noirq · ambiguous target",
+            "likely · ambiguous target"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      }
+    ],
+    "concept_queries": {
+      "queue_step": [
+        {
+          "id": "s_693cacae0942d07d06f0458435302ba1",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 11,
+          "end_line": 11,
+          "qualified": "jobs.comment.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_37786db93ee00f02bb693cf10b5e7e3f",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 12,
+          "end_line": 12,
+          "qualified": "jobs.comment.steps.with",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_ec8dd615cc7f5bb458b2ee4a9ee5f470",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 15,
+          "end_line": 15,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_9f5808aa774cd1923dcd3cb8e8bbf09f",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 16,
+          "end_line": 16,
+          "qualified": "jobs.deploy.steps.name",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_379ff53f60fdb1825d166547abc96e4a",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 17,
+          "end_line": 17,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "queue step": [
+        {
+          "id": "s_693cacae0942d07d06f0458435302ba1",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 11,
+          "end_line": 11,
+          "qualified": "jobs.comment.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_37786db93ee00f02bb693cf10b5e7e3f",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 12,
+          "end_line": 12,
+          "qualified": "jobs.comment.steps.with",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_ec8dd615cc7f5bb458b2ee4a9ee5f470",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 15,
+          "end_line": 15,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_9f5808aa774cd1923dcd3cb8e8bbf09f",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 16,
+          "end_line": 16,
+          "qualified": "jobs.deploy.steps.name",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_379ff53f60fdb1825d166547abc96e4a",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 17,
+          "end_line": 17,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "stepper evnt": [
+        {
+          "id": "s_ec009f4f4d7abb669a973ee6903d2fde",
+          "path": "config/example-cartesian.cfg",
+          "line": 12,
+          "end_line": 12,
+          "qualified": "stepper_x.dir_pin",
+          "kind": "key",
+          "group": "config",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_5995a37929f9eb7d5cc6f1a35d30e58f",
+          "path": "config/example-cartesian.cfg",
+          "line": 22,
+          "end_line": 22,
+          "qualified": "stepper_y.dir_pin",
+          "kind": "key",
+          "group": "config",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_0712cab0b7133b11209cab660552c9fc",
+          "path": "config/example-cartesian.cfg",
+          "line": 32,
+          "end_line": 32,
+          "qualified": "stepper_z.dir_pin",
+          "kind": "key",
+          "group": "config",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_0d5a002bb7c75820ee5d6c1728f804e6",
+          "path": "config/example-corexy.cfg",
+          "line": 12,
+          "end_line": 12,
+          "qualified": "stepper_x.dir_pin",
+          "kind": "key",
+          "group": "config",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_3e30c1d461363bd7cb8d2a87090ad7f0",
+          "path": "config/example-corexy.cfg",
+          "line": 23,
+          "end_line": 23,
+          "qualified": "stepper_y.dir_pin",
+          "kind": "key",
+          "group": "config",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "step compression": [
+        {
+          "id": "s_693cacae0942d07d06f0458435302ba1",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 11,
+          "end_line": 11,
+          "qualified": "jobs.comment.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_37786db93ee00f02bb693cf10b5e7e3f",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 12,
+          "end_line": 12,
+          "qualified": "jobs.comment.steps.with",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_ec8dd615cc7f5bb458b2ee4a9ee5f470",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 15,
+          "end_line": 15,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_9f5808aa774cd1923dcd3cb8e8bbf09f",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 16,
+          "end_line": 16,
+          "qualified": "jobs.deploy.steps.name",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_379ff53f60fdb1825d166547abc96e4a",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 17,
+          "end_line": 17,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "step pulse scheduling": [
+        {
+          "id": "s_693cacae0942d07d06f0458435302ba1",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 11,
+          "end_line": 11,
+          "qualified": "jobs.comment.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_37786db93ee00f02bb693cf10b5e7e3f",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 12,
+          "end_line": 12,
+          "qualified": "jobs.comment.steps.with",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_ec8dd615cc7f5bb458b2ee4a9ee5f470",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 15,
+          "end_line": 15,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_9f5808aa774cd1923dcd3cb8e8bbf09f",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 16,
+          "end_line": 16,
+          "qualified": "jobs.deploy.steps.name",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_379ff53f60fdb1825d166547abc96e4a",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 17,
+          "end_line": 17,
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "group": ".github",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "步进脉冲调度": []
+    },
+    "controlled_impact": {
+      "base": "61c0c8d2ef40340781835dd53fb04cc7a454e37a",
+      "head": "WORKTREE",
+      "changes": [
+        {
+          "repo": "root",
+          "path": "docs/prints/ringing_tower.stl",
+          "status": "modified",
+          "old_lines": [
+            [
+              1,
+              24530
+            ]
+          ],
+          "new_lines": [
+            [
+              1,
+              24530
+            ]
+          ]
+        },
+        {
+          "repo": "root",
+          "path": "src/stepper.c",
+          "status": "modified",
+          "old_lines": [
+            [
+              132,
+              132
+            ]
+          ],
+          "new_lines": [
+            [
+              132,
+              132
+            ]
+          ]
+        }
+      ],
+      "truncated": false,
+      "depth": 2,
+      "gaps": [
+        "Large file: change localized to file only: docs/prints/ringing_tower.stl",
+        "stepper_event · ambiguous target"
+      ],
+      "buckets": {
+        "changed_symbols": [
+          {
+            "id": "s_2a6325cf98eda9b9003711f4a3035d08",
+            "path": "src/stepper.c",
+            "line": 132,
+            "end_line": 148,
+            "qualified": "stepper_event_avr",
+            "kind": "function",
+            "group": "src",
+            "reason": "changed source range",
+            "confidence": "heuristic",
+            "side": "head"
+          }
+        ],
+        "direct": [],
+        "indirect": [],
+        "possible": [
+          {
+            "id": "s_48180b239659191c3de705e79fed348b",
+            "path": "src/stepper.c",
+            "line": 185,
+            "end_line": 192,
+            "qualified": "stepper_event",
+            "kind": "function",
+            "group": "src",
+            "reason": "1 hop(s) via call at src/stepper.c:190",
+            "confidence": "heuristic",
+            "side": "head"
+          }
+        ],
+        "tests": []
+      }
+    },
+    "clean_impact": {
+      "base": "61c0c8d2ef40340781835dd53fb04cc7a454e37a",
+      "head": "WORKTREE",
+      "changes": [
+        {
+          "repo": "root",
+          "path": "docs/prints/ringing_tower.stl",
+          "status": "modified",
+          "old_lines": [
+            [
+              1,
+              24530
+            ]
+          ],
+          "new_lines": [
+            [
+              1,
+              24530
+            ]
+          ]
+        }
+      ],
+      "truncated": false,
+      "depth": 2,
+      "gaps": [
+        "Large file: change localized to file only: docs/prints/ringing_tower.stl"
+      ],
+      "buckets": {
+        "changed_symbols": [],
+        "direct": [],
+        "indirect": [],
+        "possible": [],
+        "tests": []
+      }
+    },
+    "fresh_mcp_session": {
+      "protocol": "2025-06-18",
+      "context_stats": {
+        "files": 2102,
+        "symbols": 453518,
+        "references": 42529,
+        "skipped": 181
+      },
+      "scope_count": 1,
+      "query": {
+        "name": "resolve",
+        "arguments": {
+          "query": "queue_step",
+          "limit": 5
+        }
+      },
+      "shown_nodes": [],
+      "shown_edges": 0,
+      "results": [
+        {
+          "qualified": "jobs.comment.steps.uses",
+          "kind": "key",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 11
+        },
+        {
+          "qualified": "jobs.comment.steps.with",
+          "kind": "key",
+          "path": ".github/workflows/invalid-label-bot.yaml",
+          "line": 12
+        },
+        {
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 15
+        },
+        {
+          "qualified": "jobs.deploy.steps.name",
+          "kind": "key",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 16
+        },
+        {
+          "qualified": "jobs.deploy.steps.uses",
+          "kind": "key",
+          "path": ".github/workflows/klipper3d-deploy.yaml",
+          "line": 17
+        }
+      ],
+      "gaps": [],
+      "truncated": false
+    },
+    "export": {
+      "state": "stopped_after_time_budget",
+      "budget_seconds": 900,
+      "observed_seconds": 920,
+      "output_file_present": false,
+      "operation": "export --format archify (full CLI sweep)"
+    }
+  },
+  "TI": {
+    "repository": "TexasInstruments/motor-control-sdk",
+    "revision": "1f61c0e76d099b2f1c5f793a5ca8e7757568c27f",
+    "stats": {
+      "files": 2259,
+      "symbols": 15910,
+      "references": 13438,
+      "skipped": 276
+    },
+    "groups": [
+      {
+        "name": ".",
+        "files": 24,
+        "symbols": 182
+      },
+      {
+        "name": ".metadata",
+        "files": 8,
+        "symbols": 1508
+      },
+      {
+        "name": ".project",
+        "files": 89,
+        "symbols": 166
+      },
+      {
+        "name": "docs",
+        "files": 5,
+        "symbols": 0
+      },
+      {
+        "name": "docs_src",
+        "files": 124,
+        "symbols": 1554
+      },
+      {
+        "name": "examples",
+        "files": 1146,
+        "symbols": 8251
+      },
+      {
+        "name": "source",
+        "files": 863,
+        "symbols": 4249
+      }
+    ],
+    "languages": {
+      "text": 1229,
+      "c": 399,
+      "javascript": 264,
+      "make": 225,
+      "markdown": 93,
+      "ini": 22,
+      "html": 12,
+      "json": 10,
+      "xml": 3,
+      "toml": 1,
+      "css": 1
+    },
+    "architecture": {
+      "reference_scan_count": 2000,
+      "group_edges": [],
+      "group_edges_truncated": true
+    },
+    "targets": {
+      "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c#motor1CtrlISR": {
+        "id": "s_f09f74b271a073da9cceb60001f0a099",
+        "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c",
+        "line": 1335,
+        "end_line": 1340,
+        "qualified": "motor1CtrlISR",
+        "kind": "function",
+        "group": "examples",
+        "confidence": "heuristic"
+      },
+      "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c#HAL_readMtrSdfmData": {
+        "id": "s_acf795b238a223b332746ae3df8e3daf",
+        "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c",
+        "line": 1322,
+        "end_line": 1341,
+        "qualified": "HAL_readMtrSdfmData",
+        "kind": "function",
+        "group": "examples",
+        "confidence": "heuristic"
+      },
+      "source/current_sense/sdfm/driver/sdfm_drv.c#SDFM_getFilterData": {
+        "id": "s_baf0655f29a1f104b24b586fbcb1adc1",
+        "path": "source/current_sense/sdfm/driver/sdfm_drv.c",
+        "line": 831,
+        "end_line": 844,
+        "qualified": "SDFM_getFilterData",
+        "kind": "function",
+        "group": "source",
+        "confidence": "heuristic"
+      },
+      "source/current_sense/sdfm/firmware/sdfm.asm#END_RESET_NC_FRAME": null,
+      "source/current_sense/sdfm/firmware/sdfm.asm": {
+        "id": "f_a437fb626fd38c8a69beae9f3f16378d",
+        "path": "source/current_sense/sdfm/firmware/sdfm.asm",
+        "line": 1,
+        "end_line": 1,
+        "qualified": "source/current_sense/sdfm/firmware/sdfm.asm",
+        "kind": "file",
+        "group": "source",
+        "confidence": "indexed"
+      },
+      "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c#freertos_main": {
+        "id": "s_81412bdba95631ed01f1d0b6f93ccd8f",
+        "path": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c",
+        "line": 50,
+        "end_line": 55,
+        "qualified": "freertos_main",
+        "kind": "function",
+        "group": "examples",
+        "confidence": "heuristic"
+      },
+      "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c#main": {
+        "id": "s_bee63c0adf09ddb646d1825e148ee218",
+        "path": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c",
+        "line": 58,
+        "end_line": 84,
+        "qualified": "main",
+        "kind": "function",
+        "group": "examples",
+        "confidence": "heuristic"
+      },
+      "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/am243x-lp-BP-AM2BLDCSERVO/r5fss1-0_freertos/example.syscfg": {
+        "id": "f_c90716d761a277622e42f5393b7cdc4c",
+        "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/am243x-lp-BP-AM2BLDCSERVO/r5fss1-0_freertos/example.syscfg",
+        "line": 1,
+        "end_line": 1,
+        "qualified": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/am243x-lp-BP-AM2BLDCSERVO/r5fss1-0_freertos/example.syscfg",
+        "kind": "file",
+        "group": "examples",
+        "confidence": "indexed"
+      },
+      "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/am243x-lp-BP-AM2BLDCSERVO/r5fss1-0_freertos/ti-arm-clang/example.projectspec": {
+        "id": "f_ba67b1df0d98549c2412fa478a521960",
+        "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/am243x-lp-BP-AM2BLDCSERVO/r5fss1-0_freertos/ti-arm-clang/example.projectspec",
+        "line": 1,
+        "end_line": 1,
+        "qualified": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/am243x-lp-BP-AM2BLDCSERVO/r5fss1-0_freertos/ti-arm-clang/example.projectspec",
+        "kind": "file",
+        "group": "examples",
+        "confidence": "indexed"
+      },
+      "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c#motorCtrlISR": {
+        "id": "s_8c4948f529f4077193de61e4535717cd",
+        "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c",
+        "line": 1349,
+        "end_line": 2595,
+        "qualified": "motorCtrlISR",
+        "kind": "function",
+        "group": "examples",
+        "confidence": "heuristic"
+      }
+    },
+    "traces": [
+      {
+        "source": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c#motorCtrlISR",
+        "target": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c#HAL_readMtrSdfmData",
+        "kind": "direct C call",
+        "anchors": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c:1366",
+        "direction_used": "out",
+        "observed": {
+          "nodes": 54,
+          "edges": 137,
+          "gaps": [
+            "CycleCounterP_getCount32 · definition outside index or dynamic",
+            "CycleCounterP_reset · definition outside index or dynamic",
+            "DAC128S_writeData · definition outside index or dynamic",
+            "DCLINK_SS_getIa · definition outside index or dynamic",
+            "DCLINK_SS_getIb · definition outside index or dynamic",
+            "DCLINK_SS_getIc · definition outside index or dynamic",
+            "DCLINK_SS_getSector1 · definition outside index or dynamic",
+            "DCLINK_SS_runCurrentReconstruction · definition outside index or dynamic",
+            "HAL_getMtrEncoderPosition · ambiguous target",
+            "HAL_getPwmEnableStatus · ambiguous target",
+            "HAL_readMtrSdfmData · ambiguous target",
+            "HAL_runSingleShuntCompensation · definition outside index or dynamic",
+            "HAL_writePWMData · ambiguous target",
+            "SSIPD_getAngleCmd_rad · definition outside index or dynamic",
+            "SSIPD_getRunState · definition outside index or dynamic",
+            "SSIPD_getVolInject_V · definition outside index or dynamic",
+            "SSIPD_inine_run · definition outside index or dynamic",
+            "VIB_COMP_inline_run · definition outside index or dynamic",
+            "collectRMSData · ambiguous target",
+            "cosf · definition outside index or dynamic",
+            "fabs · definition outside index or dynamic",
+            "sinf · definition outside index or dynamic",
+            "sqrtf · definition outside index or dynamic"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c#HAL_readMtrSdfmData",
+        "target": "source/current_sense/sdfm/driver/sdfm_drv.c#SDFM_getFilterData",
+        "kind": "direct C call",
+        "anchors": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c:1327,1331,1335",
+        "direction_used": "out",
+        "observed": {
+          "nodes": 1,
+          "edges": 0,
+          "gaps": [
+            "SDFM_getFilterData · ambiguous target"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "source/current_sense/sdfm/firmware/sdfm.asm#END_RESET_NC_FRAME",
+        "target": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c#motor1CtrlISR",
+        "kind": "PRU R31 interrupt to R5F ISR",
+        "anchors": "source/current_sense/sdfm/firmware/sdfm.asm:876-883; examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/sys_main.c:250-256",
+        "direction_used": "in (source absent)",
+        "observed": {
+          "nodes": 1,
+          "edges": 0,
+          "gaps": [],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "source/current_sense/sdfm/firmware/sdfm.asm#END_RESET_NC_FRAME",
+        "target": "source/current_sense/sdfm/driver/sdfm_drv.c#SDFM_getFilterData",
+        "kind": "PRU writes host sample buffer, C driver reads sampleOutputInterface",
+        "anchors": "source/current_sense/sdfm/firmware/sdfm.asm:878-881; source/current_sense/sdfm/driver/sdfm_drv.c:302,831-843",
+        "direction_used": "in (source absent)",
+        "observed": {
+          "nodes": 1,
+          "edges": 0,
+          "gaps": [
+            "SDFM_getFilterData · ambiguous target"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      },
+      {
+        "source": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c#main",
+        "target": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c#freertos_main",
+        "kind": "FreeRTOS task registration callback, independent SDFM example",
+        "anchors": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c:65-75",
+        "direction_used": "out",
+        "observed": {
+          "nodes": 1,
+          "edges": 0,
+          "gaps": [
+            "Board_init · definition outside index or dynamic",
+            "DebugP_assertNoLog · definition outside index or dynamic",
+            "System_init · definition outside index or dynamic",
+            "configASSERT · definition outside index or dynamic",
+            "vTaskStartScheduler · definition outside index or dynamic",
+            "xTaskCreateStatic · definition outside index or dynamic"
+          ],
+          "truncated": false
+        },
+        "hits": []
+      }
+    ],
+    "within_file_control": {
+      "edges": [
+        {
+          "source": "motor1CtrlISR",
+          "target": "motorCtrlISR",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c",
+          "line": 1338,
+          "confidence": "heuristic"
+        }
+      ],
+      "truncated": false,
+      "gaps": []
+    },
+    "search_top5": {
+      "motor1CtrlISR": [
+        {
+          "id": "s_bf2e872f8e8b0cecf5f9655742a65b8a",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.h",
+          "line": 267,
+          "end_line": 267,
+          "qualified": "motor1CtrlISR",
+          "kind": "declaration",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_f09f74b271a073da9cceb60001f0a099",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.c",
+          "line": 1335,
+          "end_line": 1340,
+          "qualified": "motor1CtrlISR",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_1d4eb20d51b21e5be99ba2cbcd4a7563",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_control/motor1_drive.h",
+          "line": 207,
+          "end_line": 207,
+          "qualified": "motor1CtrlISR",
+          "kind": "declaration",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_8540f101e73c730594e6281ca280c0f7",
+          "path": "examples/tidm_02018_universal_motorcontrol/universal_motorcontrol/src_board/hal.h",
+          "line": 441,
+          "end_line": 441,
+          "qualified": "motor1CtrlISR",
+          "kind": "declaration",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_7349277a7b26aca188187f8d1dd1a128",
+          "path": "examples/tidm_02018_universal_motorcontrol/universal_motorcontrol/src_control/motor1_drive.c",
+          "line": 1124,
+          "end_line": 2354,
+          "qualified": "motor1CtrlISR",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "HAL_readMtrSdfmData": [
+        {
+          "id": "s_acf795b238a223b332746ae3df8e3daf",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c",
+          "line": 1322,
+          "end_line": 1341,
+          "qualified": "HAL_readMtrSdfmData",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_0494cf68a260e80294418d726f699bb4",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.h",
+          "line": 418,
+          "end_line": 418,
+          "qualified": "HAL_readMtrSdfmData",
+          "kind": "declaration",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_33eba2c34010748ea808b38adff9612c",
+          "path": "docs_src/docs/api_guide/components/rtlibs/utilities/datalog/datalog.md",
+          "line": 53,
+          "end_line": 57,
+          "qualified": "Datalog {#DATALOG}.API",
+          "kind": "heading",
+          "group": "docs_src",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_d4091a498cf720c337fb01dae4608b19",
+          "path": "docs_src/docs/api_guide/components/rtlibs/observer/observer.md",
+          "line": 30,
+          "end_line": 33,
+          "qualified": "Observer algorithms {#OBSERVERS}.Hall",
+          "kind": "heading",
+          "group": "docs_src",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_6a0994dff35bc04b7c86a6644cae4163",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.h",
+          "line": 41,
+          "end_line": 41,
+          "qualified": "HAL_H",
+          "kind": "macro",
+          "group": "examples",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "SDFM_getFilterData": [
+        {
+          "id": "s_baf0655f29a1f104b24b586fbcb1adc1",
+          "path": "source/current_sense/sdfm/driver/sdfm_drv.c",
+          "line": 831,
+          "end_line": 844,
+          "qualified": "SDFM_getFilterData",
+          "kind": "function",
+          "group": "source",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_76d50c7ec4966f330aad95ec547edd56",
+          "path": "source/current_sense/sdfm/include/sdfm_api.h",
+          "line": 445,
+          "end_line": 445,
+          "qualified": "SDFM_getFilterData",
+          "kind": "declaration",
+          "group": "source",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_33eba2c34010748ea808b38adff9612c",
+          "path": "docs_src/docs/api_guide/components/rtlibs/utilities/datalog/datalog.md",
+          "line": 53,
+          "end_line": 57,
+          "qualified": "Datalog {#DATALOG}.API",
+          "kind": "heading",
+          "group": "docs_src",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_3b3cd0aa757142e12604fb987f1c9bf9",
+          "path": "source/position_sense/tamagawa_over_soc_uart/include/tamagawa_soc_uart_interface.h",
+          "line": 102,
+          "end_line": 114,
+          "qualified": "data_id",
+          "kind": "enum",
+          "group": "source",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_f8efbe21184ee26ab09716e7efa0827f",
+          "path": "source/rtlibs/control/filter/filter_fo/include/filter_fo.h",
+          "line": 34,
+          "end_line": 34,
+          "qualified": "FILTER_FO_H",
+          "kind": "macro",
+          "group": "source",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "END_RESET_NC_FRAME": [
+        {
+          "id": "s_91849d893a4540851ba5afc6cd09c6a0",
+          "path": "source/position_sense/tamagawa/firmware/multi_ch_receive_frames.h",
+          "line": 241,
+          "end_line": 242,
+          "qualified": "frame",
+          "kind": "declaration",
+          "group": "source",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_5ac0abaadabd823814011f28e85208ac",
+          "path": "source/position_sense/tamagawa/firmware/multi_ch_receive_frames.h",
+          "line": 266,
+          "end_line": 267,
+          "qualified": "frame",
+          "kind": "declaration",
+          "group": "source",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_d2dd7f97e1ece354fbb47ad7511104ea",
+          "path": "source/position_sense/tamagawa/firmware/single_ch_receive_frames.h",
+          "line": 173,
+          "end_line": 174,
+          "qualified": "frame",
+          "kind": "declaration",
+          "group": "source",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_16f0aba6cee5fc93ae5263db1c61bec7",
+          "path": "source/position_sense/tamagawa/firmware/single_ch_receive_frames.h",
+          "line": 205,
+          "end_line": 206,
+          "qualified": "frame",
+          "kind": "declaration",
+          "group": "source",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_ec6d546f55efc8c12a054ee2956c3446",
+          "path": "docs_src/docs/api_guide/components/position_sense/endat.md",
+          "line": 274,
+          "end_line": 277,
+          "qualified": "EnDat {#ENDAT}.API",
+          "kind": "heading",
+          "group": "docs_src",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "freertos_main": [
+        {
+          "id": "s_4b39502c19f9131c899f957ea0578dea",
+          "path": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-evm/r5fss0-0_freertos/main.c",
+          "line": 50,
+          "end_line": 55,
+          "qualified": "freertos_main",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_81412bdba95631ed01f1d0b6f93ccd8f",
+          "path": "examples/current_sense/icss_sdfm_nine_channel_load_share_continuous_mode/am243x-lp/r5fss0-0_freertos/main.c",
+          "line": 50,
+          "end_line": 55,
+          "qualified": "freertos_main",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_069878b85add50f6f60fea0b045d6b2f",
+          "path": "examples/current_sense/icss_sdfm_nine_channel_load_share_snoop_mode/am243x-evm/r5fss0-0_freertos/main.c",
+          "line": 50,
+          "end_line": 55,
+          "qualified": "freertos_main",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_0738ef40cf9370871994c8eb399e386f",
+          "path": "examples/current_sense/icss_sdfm_nine_channel_load_share_snoop_mode/am243x-lp/r5fss0-0_freertos/main.c",
+          "line": 50,
+          "end_line": 55,
+          "qualified": "freertos_main",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_f4c7e58b2ed706faca7ad67a5693b0c5",
+          "path": "examples/current_sense/icss_sdfm_nine_channel_single_pru_mode/am243x-evm/r5fss0-0_freertos/main.c",
+          "line": 50,
+          "end_line": 55,
+          "qualified": "freertos_main",
+          "kind": "function",
+          "group": "examples",
+          "reason": "query · exact symbol",
+          "confidence": "heuristic"
+        }
+      ],
+      "RTOS_NORTOS_IPC_SHM_MEM": [
+        {
+          "id": "s_9b4a652d696b672dd3c931d270b92d02",
+          "path": "examples/pruicss_pwm/pruicss_pwm_dead_band_epwm_sync/.project/project_am243x.js",
+          "line": 32,
+          "end_line": 39,
+          "qualified": "libdirs_nortos",
+          "kind": "object",
+          "group": "examples",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_2a3e62521d3386ae55f63040eb3c008a",
+          "path": "examples/pruicss_pwm/pruicss_pwm_dead_band_epwm_sync/.project/project_am64x.js",
+          "line": 32,
+          "end_line": 39,
+          "qualified": "libdirs_nortos",
+          "kind": "object",
+          "group": "examples",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_2226f759bd4c6cb30ddd4fd1f6c9f10c",
+          "path": "examples/rtlibs/dcl/dcl_df22/.project/mcsdk_project_am243x.js",
+          "line": 30,
+          "end_line": 36,
+          "qualified": "libdirs_nortos",
+          "kind": "object",
+          "group": "examples",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_577f26be571a7173037c223d6f337a3c",
+          "path": "examples/rtlibs/dcl/dcl_df22/.project/mcsdk_project_am261x.js",
+          "line": 30,
+          "end_line": 36,
+          "qualified": "libdirs_nortos",
+          "kind": "object",
+          "group": "examples",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        },
+        {
+          "id": "s_0f0c9204c423cf60210a7084abb8bb4b",
+          "path": "examples/rtlibs/dcl/dcl_df22/.project/mcsdk_project_am263px.js",
+          "line": 30,
+          "end_line": 36,
+          "qualified": "libdirs_nortos",
+          "kind": "object",
+          "group": "examples",
+          "reason": "token · symbol",
+          "confidence": "heuristic"
+        }
+      ]
+    },
+    "fresh_mcp_session": {
+      "protocol": "2025-06-18",
+      "context_stats": {
+        "files": 2259,
+        "symbols": 15910,
+        "references": 13438,
+        "skipped": 276
+      },
+      "scope_count": 1,
+      "query": {
+        "name": "trace",
+        "arguments": {
+          "id": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c#HAL_readMtrSdfmData",
+          "direction": "out",
+          "depth": 1,
+          "limit": 30
+        }
+      },
+      "shown_nodes": [
+        {
+          "qualified": "HAL_readMtrSdfmData",
+          "kind": "function",
+          "path": "examples/tidep_01032_dual_motor_drive/universal_single_chip_servo/src_board/hal.c",
+          "line": 1322
+        }
+      ],
+      "shown_edges": 0,
+      "results": [],
+      "gaps": [
+        "SDFM_getFilterData · ambiguous target"
+      ],
+      "truncated": false
+    }
+  },
+  "screens": [
+    {
+      "name": "artiq-architecture",
+      "nodes": 6,
+      "edges": 0,
+      "labels": [
+        "仓库根目录",
+        ".github",
+        "artiq",
+        "doc",
+        "experimental-features",
+        "artiq-8.0-fieldtrial"
+      ],
+      "heading": "架构总览"
+    },
+    {
+      "name": "artiq-functions",
+      "nodes": 6,
+      "edges": 6,
+      "labels": [
+        "pulse_mu",
+        "on",
+        "delay_mu",
+        "off",
+        "set_o",
+        "rtio_output"
+      ],
+      "heading": "关系追踪"
+    },
+    {
+      "name": "klipper-functions",
+      "nodes": 4,
+      "edges": 3,
+      "labels": [
+        "stepper_event",
+        "stepper_event_ed…",
+        "stepper_event_avr",
+        "stepper_event_full"
+      ],
+      "heading": "关系追踪"
+    },
+    {
+      "name": "ti-hal",
+      "nodes": 1,
+      "edges": 0,
+      "labels": [
+        "HAL_readMtrSdf…"
+      ],
+      "heading": "关系追踪"
+    }
+  ]
+}

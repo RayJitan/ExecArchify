@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "artiq-8.0-fieldtrial",
+    "locale": "en",
+    "output": "architecture.html",
+    "subtitle": "Workspace source groups and evidenced dependencies",
+    "feedback_links": false
+  },
+  "layout": {
+    "mode": "auto"
+  },
+  "components": [
+    {
+      "id": "group-cdb4ee2aea69",
+      "type": "backend",
+      "label": ".",
+      "sublabel": "12 files / 51 symbols"
+    },
+    {
+      "id": "group-bdcc6a2a85f6",
+      "type": "backend",
+      "label": ".github",
+      "sublabel": "4 files / 24 symbols"
+    },
+    {
+      "id": "group-91e2f935d02c",
+      "type": "backend",
+      "label": "artiq",
+      "sublabel": "698 files / 7934 symbols"
+    },
+    {
+      "id": "group-139d544b821b",
+      "type": "backend",
+      "label": "doc",
+      "sublabel": "29 files / 258 symbols"
+    },
+    {
+      "id": "group-5070ede3df9d",
+      "type": "backend",
+      "label": "experimental-features",
+      "sublabel": "3 files / 0 symbols"
+    }
+  ],
+  "connections": []
+}

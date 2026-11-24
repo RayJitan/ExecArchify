@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ExecArchify · 架构浏览器</title>
+  <link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main-content">跳到主要内容</a>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="ExecArchify 架构总览"><img src="/static/mark.svg" alt="" width="32" height="32">ExecArchify</a>
+    <span class="product">架构浏览器</span>
+    <form class="top-search" id="top-search" role="search">
+      <span data-icon="search"></span>
+      <input id="global-query" type="search" aria-label="查找符号、文件或术语" placeholder="查找符号、文件或术语" autocomplete="off">
+      <kbd aria-hidden="true">/</kbd>
+    </form>
+    <button type="button" id="reload" class="icon-btn" aria-label="刷新当前视图" title="刷新当前视图"><span data-icon="refresh"></span></button>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="nav-label">工作区</div>
+      <nav class="nav" aria-label="浏览视图">
+        <a href="#overview" data-view="overview"><span data-icon="layers"></span>架构总览</a>
+        <a href="#search" data-view="search"><span data-icon="search"></span>符号检索</a>
+        <a href="#trace" data-view="trace"><span data-icon="graph"></span>关系追踪</a>
+        <a href="#impact" data-view="impact"><span data-icon="diff"></span>变更影响</a>
+      </nav>
+      <div class="source-nav">
+        <div class="nav-label">已索引仓库</div>
+        <div id="repo-list"></div>
+      </div>
+      <div class="generation" id="generation" role="status">连接工作区…</div>
+    </aside>
+    <main id="main-content" tabindex="-1">
+      <div class="mast">
+        <div class="root-line" id="root-line"></div>
+        <h1 id="title">架构总览</h1>
+      </div>
+      <div class="workspace-grid">
+        <div id="primary" class="primary" aria-busy="true"></div>
+        <aside id="inspector" class="inspector" aria-label="详情" tabindex="-1"></aside>
+      </div>
+    </main>
+  </div>
+  <div id="notice" class="sr-only" role="status" aria-live="polite"></div>
+  <noscript>启用 JavaScript 即可浏览本地索引。</noscript>
+</body>
+</html>
